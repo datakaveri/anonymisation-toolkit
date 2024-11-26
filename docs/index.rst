@@ -1,9 +1,3 @@
-.. SPIDEr-DP Toolkit documentation
-.. ===============================
-
-.. Add your content using ``reStructuredText`` syntax. See the
-.. `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-.. documentation for details.
 
 .. .. automodule:: sanitisation
 ..    :members:
@@ -25,7 +19,7 @@ CDPG Anonymisation Toolkit
 
 Welcome to the documentation for the CDPG Anonymisation Toolkit!
 
-.. image:: _static/logo.png
+.. image:: _static/CDPG_logo.png
    :alt: Project Logo
    :align: center
 
