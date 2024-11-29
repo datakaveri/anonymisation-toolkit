@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cdpg-anonkit"
-version = "0.1.2"
+version = "0.1.2.2"
 description = "A toolkit for anonymisation of data"
 readme = "README.md"
 authors = [{ name = "Novoneel Chakraborty", email = "novoneel.chakraborty@datakaveri.org" }]
