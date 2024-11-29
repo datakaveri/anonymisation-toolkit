@@ -8,9 +8,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    permissions:
-      id-token: write # Required for trusted publishing
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -29,4 +26,8 @@ jobs:
         run: python -m build
 
       - name: Publish to TestPyPi
-        run: python3 -m twine upload --repository testpypi dist/* --verbose
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
+        run: |
+          python -m twine upload --repository testpypi dist/*
