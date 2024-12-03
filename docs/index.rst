@@ -19,7 +19,7 @@ CDPG Anonymisation Toolkit
 
 Welcome to the documentation for the CDPG Anonymisation Toolkit!
 
-.. image:: _static/logo.png
+.. image:: _static/CDPG_logo.png
    :alt: Project Logo
    :align: center
 

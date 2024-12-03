@@ -1,13 +1,13 @@
 """
 A toolkit for data anonymisation.
-View the documentation for this project [here](https://novoneel-iudx.github.io/differential-privacy-toolkit/).
 """
 __version__ = "0.1.2"
 
 
 '''Functions to be exposed to user'''
-from sanitisation import *
-from generalisation import *
+from src.cdpg_anonkit.sanitisation import *
+from src.cdpg_anonkit.generalisation import *
+from src.cdpg_anonkit.aggregation import *
 
 __all__ = [
     'SanitiseData',
