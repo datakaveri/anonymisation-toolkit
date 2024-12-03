@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from typing import List, Union, Callable, Optional, Dict, Any
+from typing import List, Literal, Union, Callable, Optional, Dict, Any
 
 class IncrementalGroupbyAggregator:
     """
@@ -10,7 +10,7 @@ class IncrementalGroupbyAggregator:
     """
     def __init__(self, group_columns: Union[str, List[str]], 
                  agg_column: str, 
-                 agg_func: Union[str, Callable] = 'mean'):
+                 agg_func: Literal['sum', 'count', 'min', 'max', 'mean']):
 
         """
         Initialises an IncrementalGroupbyAggregator object.
@@ -27,15 +27,20 @@ class IncrementalGroupbyAggregator:
             The aggregation function to use. If a string, must be one of
             {'mean', 'sum', 'min', 'max', 'count'}; if a Callable, must take
             a pd.Series as input and return a pd.Series or pd.DataFrame.
-            Defaults to 'mean'.
         """
         self.group_columns = [group_columns] if isinstance(group_columns, str) else group_columns
         self.agg_column = agg_column
         self.agg_func = agg_func
+
+        # Validate aggregation function
+        if self.agg_func not in {'mean', 'sum', 'min', 'max', 'count'}:
+            raise ValueError(f"Unsupported aggregation function: {self.agg_func}")
         
         # Internal storage for incremental computation
         self._group_stats: Dict[tuple, Dict[str, Any]] = {}
-    
+
+
+
     def _merge_chunk_stats(self, existing: Dict[str, Any], 
                             new_chunk: Dict[str, Any]) -> Dict[str, Any]:
 
@@ -226,3 +231,26 @@ def example_usage():
             'speed': [65, 45, 40]
         })
     ]
+    
+#     # Demonstrate different aggregation strategies
+#     # aggregation_funcs = ['count', 'sum', 'mean', 'min', 'max']
+#     aggregation_funcs = ['mean']
+    
+#     for func in aggregation_funcs:
+#         print(f"\nAggregation function: {func}")
+#         aggregator = IncrementalGroupbyAggregator(
+#             group_columns=['H3', 'date'], 
+#             agg_column='speed', 
+#             agg_func=func
+#         )
+        
+#         # Process each chunk
+#         for chunk in data_chunks:
+#             aggregator.process_chunk(chunk)
+        
+#         # Get final result
+#         result = aggregator.get_final_result()
+#         print(result)
+
+# # Uncomment to run example
+# # example_usage()
