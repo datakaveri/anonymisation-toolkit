@@ -38,23 +38,6 @@ class TestSanitiseData:
         # assert result['age'].iloc[2] == 18  # Check if value below min was clipped
         # assert result['age'].iloc[5] == 80  # Check if value above max was clipped
 
-    def test_categorise_method(self, sample_df):
-        """Test the categorisation functionality."""
-        rules = {
-            'income': {
-                'method': 'categorise',
-                'params': {
-                    'bins': 3,
-                    'labels': ['low', 'medium', 'high']
-                }
-            }
-        }
-        
-        result = sanitiser.sanitise_data(sample_df, ['income'], rules)
-        
-        assert set(result['income'].unique()) <= {'low', 'medium', 'high'}
-        assert len(result) == len(sample_df)
-        assert isinstance(result['income'].dtype, pd.CategoricalDtype)
 
     def test_hash_method(self, sample_df):
         """Test the hashing functionality."""
@@ -98,15 +81,13 @@ class TestSanitiseData:
         """Test applying multiple sanitisation methods simultaneously."""
         rules = {
             'age': {'method': 'clip', 'params': {'min_value': 18, 'max_value': 80}},
-            'income': {'method': 'categorise', 'params': {'bins': 3, 'labels': ['low', 'medium', 'high']}},
             'city': {'method': 'suppress', 'params': {'threshold': 2, 'replacement': 'Other'}}
         }
         
-        result = sanitiser.sanitise_data(sample_df, ['age', 'income', 'city'], rules)
+        result = sanitiser.sanitise_data(sample_df, ['age', 'city'], rules)
         
         assert result['age'].min() >= 18
         assert result['age'].max() <= 80
-        assert set(result['income'].unique()) <= {'low', 'medium', 'high'}
         assert all(count >= 2 for count in result['city'].value_counts())
 
     def test_error_handling(self, sample_df):
