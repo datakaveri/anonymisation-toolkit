@@ -170,14 +170,7 @@ class GeneraliseData:
             generalise_temporal(df, timestamp_col='timestamp')
             """
             temporal_resolution_args = Literal[15, 30, 60]
-            """
-            Example:
-            ### Using with a Series
-            generalise_temporal(ts_series)
             
-            ### Using with a DataFrame
-            generalise_temporal(df, timestamp_col='timestamp')
-            """
             # Validate temporal resolution
             options = list(get_args(temporal_resolution_args))
             assert temporal_resolution in options, (
