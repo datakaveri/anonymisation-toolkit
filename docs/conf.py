@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.coverage', 'sphinx.ext.napoleon', 'autoapi.extension', 'sphinx.ext.viewcode', 'sphinx.ext.githubpages', 'furo',]
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.coverage', 'sphinx.ext.napoleon', 'autoapi.extension', 'sphinx.ext.viewcode', 'sphinx.ext.githubpages'z]
 
 autoapi_dirs = ['../src/cdpg_anonkit/']
 templates_path = ['_templates']
