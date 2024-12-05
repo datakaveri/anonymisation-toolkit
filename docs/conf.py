@@ -28,17 +28,20 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-# import sphinx_rtd_theme
-# import furo
-html_theme = 'sphinx_rtd_theme'
 
+html_theme = 'furo'
+html_logo = '/home/novoneel-iudx/anonymisation-toolkit/docs/_build/html/_static/cdpg-logo_hires.png'
 html_theme_options = {
-    'navigation_depth': 2,
-    'collapse_navigation': False,
-    'sticky_navigation': True,
-    'display_version': True,
-    'logo_only': True,
+    "light_css_variables": {
+        "color-brand-primary": "orange",
+        "color-brand-secondary": "blue",
+        "color-brand-content": "#CC3333",
+        "color-admonition-background": "blue",
+    },
+    "navigation_with_keys": True,
+    'sidebar_hide_name': True,
 }
 
 html_baseurl = 'https://novoneel-iudx.github.io/differential-privacy-toolkit/'
 html_extra_path = ['.nojekyll']
+

@@ -10,14 +10,18 @@ CDPG Anonkit
 
 CDPG Anonkit is a toolkit that can be used to preprocess, anonymise, and post-process data. This toolkit was originally written as an application intended to be run inside a Trusted Execution Environment (TEE) and was later developed into a python package to allow anyone to be able to use it for any dataset.
 
+Quick Start
+-----------
+
 .. code-block:: bash
 
-  pip install cdpg-anonkit --extra-index-url=https://test.pypi.org/simple/
+   pip install cdpg-anonkit --extra-index-url=https://test.pypi.org/simple/
 
 .. code-block:: python
 
    import cdpg_anonkit
    import pandas as pd
+   import h3
    
    # Quick example
    from cdpg_anonkit import SanitiseData as sanitisation
@@ -39,6 +43,27 @@ CDPG Anonkit is a toolkit that can be used to preprocess, anonymise, and post-pr
                                               sanitisation_rules=sanitisation_rules)
 
 
+
+Possible Operations
+-------------------
+
+* Sanitisation
+  * Clipping
+  * Hashing
+  * Suppression  
+* Generalisation
+  * Spatial Generalisation
+  * Temporal Generalisation
+  * Categorical Generalisation
+* Aggregation
+  * Query Building
+* Differential Privacy
+  * Sensitivity Computation
+  * Noise Addition
+* Post Processing 
+  * Rounding and Clipping
+  * Epsilon vs MAE
+
 Contents
 --------
 
@@ -46,14 +71,14 @@ Contents
    :maxdepth: 3
    :caption: Contents:
 
-   intro
+   installation
    quickstart
    api
    examples
    contributing
    changelog
 
-Index
+Indices and tables
 ==================
 
 * :ref:`genindex`

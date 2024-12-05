@@ -1,0 +1,96 @@
+cdpg_anonkit.aggregation
+========================
+
+.. py:module:: cdpg_anonkit.aggregation
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   cdpg_anonkit.aggregation.IncrementalGroupbyAggregator
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   cdpg_anonkit.aggregation.example_usage
+
+
+Module Contents
+---------------
+
+.. py:class:: IncrementalGroupbyAggregator(group_columns: Union[str, List[str]], agg_column: str, agg_func: Literal['sum', 'count', 'min', 'max', 'mean'])
+
+   Handles incremental aggregation of large datasets processed in chunks.
+
+   Carefully merges chunk-level statistics to ensure correct final aggregation.
+
+
+   .. py:attribute:: group_columns
+
+
+   .. py:attribute:: agg_column
+
+
+   .. py:attribute:: agg_func
+
+
+   .. py:attribute:: _group_stats
+      :type:  Dict[tuple, Dict[str, Any]]
+
+
+   .. py:method:: _merge_chunk_stats(existing: Dict[str, Any], new_chunk: Dict[str, Any]) -> Dict[str, Any]
+
+      Merge chunk-level statistics into existing statistics.
+
+      :param existing: The existing statistics to merge into.
+      :type existing: Dict[str, Any]
+      :param new_chunk: The new chunk statistics to merge.
+      :type new_chunk: Dict[str, Any]
+
+      :returns: The merged statistics.
+      :rtype: Dict[str, Any]
+
+      :raises ValueError: If the aggregation function is not one of {'mean', 'sum', 'min', 'max', 'count'}.
+
+
+
+   .. py:method:: process_chunk(chunk: pandas.DataFrame)
+
+      Process a chunk of data by performing aggregation and updating internal statistics.
+
+      This method processes a given data chunk by validating its columns, performing
+      groupby aggregation based on the specified aggregation function, and merging the
+      computed statistics into the internal storage for incremental aggregation.
+
+      :param chunk: A DataFrame representing a chunk of data to be processed. It must contain
+                    the columns specified in `self.group_columns` and `self.agg_column`.
+      :type chunk: pd.DataFrame
+
+      :raises ValueError: If any of the required columns specified in `self.group_columns` or
+          `self.agg_column` are not found in the chunk, or if the aggregation
+          function is unsupported.
+
+
+
+   .. py:method:: get_final_result() -> pandas.DataFrame
+
+      Return the final result as a DataFrame after all chunks have been processed.
+
+      After all chunks have been processed using `process_chunk`, this method
+      returns a DataFrame containing the final result of the aggregation.
+      The columns of the DataFrame include the group columns and the aggregated
+      column with a name based on the specified aggregation function (e.g.
+      'mean', 'sum', 'min', 'max', or 'count').
+
+      :returns: The final result of the aggregation.
+      :rtype: pd.DataFrame
+
+
+
+.. py:function:: example_usage()
+

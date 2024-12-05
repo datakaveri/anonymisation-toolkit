@@ -2,11 +2,13 @@
 <html class="no-js" lang="en" data-content_root="./">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" />
-        <link rel="canonical" href="https://novoneel-iudx.github.io/differential-privacy-toolkit/genindex.html" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="API Reference" href="autoapi/index.html" /><link rel="prev" title="CDPG Anonkit" href="index.html" />
+        <link rel="canonical" href="https://novoneel-iudx.github.io/differential-privacy-toolkit/intro.html" />
 
-    <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 --><title>Index - Anonymisation Toolkit 0.1.2.1 documentation</title>
-<link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+        <title>Introduction - Anonymisation Toolkit 0.1.2.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
@@ -182,7 +184,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -205,8 +207,8 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Introduction</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="autoapi/index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="autoapi/cdpg_anonkit/index.html">cdpg_anonkit</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of cdpg_anonkit</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="autoapi/cdpg_anonkit/aggregation/index.html">cdpg_anonkit.aggregation</a></li>
@@ -235,7 +237,13 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/intro.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
@@ -244,212 +252,111 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          
-<section class="genindex-section">
-  <h1 id="index">Index</h1>
-  <div class="genindex-jumpbox"><a href="#_"><strong>_</strong></a> | <a href="#A"><strong>A</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#S"><strong>S</strong></a></div>
+          <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h1>
+<p>CDPG Anonkit is a toolkit that can be used to preprocess, anonymise, and post-process data. This toolkit was originally written as an application intended to be run inside a Trusted Execution Environment (TEE) and was later developed into a python package to allow anyone to be able to use it for any dataset.</p>
+<p>Using the toolkit, you can perform the following operations:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Sanitisation</dt><dd><ul>
+<li><p>Clipping</p></li>
+<li><p>Hashing</p></li>
+<li><p>Suppression</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Generalisation</dt><dd><ul>
+<li><p>Spatial Generalisation</p></li>
+<li><p>Temporal Generalisation</p></li>
+<li><p>Categorical Generalisation</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Aggregation</dt><dd><ul>
+<li><p>Query Building</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Differential Privacy</dt><dd><ul>
+<li><p>Sensitivity Computation</p></li>
+<li><p>Noise Addition</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Post Processing</dt><dd><ul>
+<li><p>Rounding and Clipping</p></li>
+<li><p>Epsilon vs MAE</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>CDPG Anonkit is available on PyPI. We recommend using the latest version of Python - CDPG Anonkit supports Python 3.10 and newer.
+We also recommend using a <a class="reference external" href="https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments">virtual environment</a> in order
+to isolate your project dependencies from other projects and the system.</p>
+<p>Install the most recent cdpg-anonkit version using pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>cdpg-anonkit
+</pre></div>
+</div>
+<section id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">¶</a></h3>
+<p>These will be installed automatically when installing the package.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://markupsafe.palletsprojects.com/">MarkupSafe</a> escapes untrusted input when rendering templates to
+avoid injection attacks.</p></li>
+</ul>
 </section>
-<section id="_" class="genindex-section">
-  <h2>_</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/aggregation/index.html#cdpg_anonkit.aggregation.IncrementalGroupbyAggregator._group_stats">_group_stats (cdpg_anonkit.aggregation.IncrementalGroupbyAggregator attribute)</a>
-</li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/aggregation/index.html#cdpg_anonkit.aggregation.IncrementalGroupbyAggregator._merge_chunk_stats">_merge_chunk_stats() (cdpg_anonkit.aggregation.IncrementalGroupbyAggregator method)</a>
-</li>
-    </ul></td>
-  </tr></table>
+<section id="optional-dependencies">
+<h3>Optional Dependencies<a class="headerlink" href="#optional-dependencies" title="Link to this heading">¶</a></h3>
+<p>These distributions will not be installed automatically.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://babel.pocoo.org/">Babel</a> provides translation support in templates.</p></li>
+</ul>
 </section>
-
-<section id="A" class="genindex-section">
-  <h2>A</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/aggregation/index.html#cdpg_anonkit.aggregation.IncrementalGroupbyAggregator.agg_column">agg_column (cdpg_anonkit.aggregation.IncrementalGroupbyAggregator attribute)</a>
-</li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/aggregation/index.html#cdpg_anonkit.aggregation.IncrementalGroupbyAggregator.agg_func">agg_func (cdpg_anonkit.aggregation.IncrementalGroupbyAggregator attribute)</a>
-</li>
-    </ul></td>
-  </tr></table>
 </section>
-
-<section id="C" class="genindex-section">
-  <h2>C</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li>
-    cdpg_anonkit
-
-        <ul>
-          <li><a href="autoapi/cdpg_anonkit/index.html#module-cdpg_anonkit">module</a>
-</li>
-        </ul></li>
-        <li>
-    cdpg_anonkit.aggregation
-
-        <ul>
-          <li><a href="autoapi/cdpg_anonkit/aggregation/index.html#module-cdpg_anonkit.aggregation">module</a>
-</li>
-        </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li>
-    cdpg_anonkit.generalisation
-
-        <ul>
-          <li><a href="autoapi/cdpg_anonkit/generalisation/index.html#module-cdpg_anonkit.generalisation">module</a>
-</li>
-        </ul></li>
-        <li>
-    cdpg_anonkit.sanitisation
-
-        <ul>
-          <li><a href="autoapi/cdpg_anonkit/sanitisation/index.html#module-cdpg_anonkit.sanitisation">module</a>
-</li>
-        </ul></li>
-        <li><a href="autoapi/cdpg_anonkit/sanitisation/index.html#cdpg_anonkit.sanitisation.SanitiseData.clip">clip() (cdpg_anonkit.sanitisation.SanitiseData method)</a>
-</li>
-    </ul></td>
-  </tr></table>
 </section>
-
-<section id="E" class="genindex-section">
-  <h2>E</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/aggregation/index.html#cdpg_anonkit.aggregation.example_usage">example_usage() (in module cdpg_anonkit.aggregation)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="F" class="genindex-section">
-  <h2>F</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/generalisation/index.html#cdpg_anonkit.generalisation.GeneraliseData.SpatialGeneraliser.format_coordinates">format_coordinates() (cdpg_anonkit.generalisation.GeneraliseData.SpatialGeneraliser static method)</a>
-</li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/generalisation/index.html#cdpg_anonkit.generalisation.GeneraliseData.TemporalGeneraliser.format_timestamp">format_timestamp() (cdpg_anonkit.generalisation.GeneraliseData.TemporalGeneraliser static method)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="G" class="genindex-section">
-  <h2>G</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/generalisation/index.html#cdpg_anonkit.generalisation.GeneraliseData.CategoricalGeneraliser.generalise_categorical">generalise_categorical() (cdpg_anonkit.generalisation.GeneraliseData.CategoricalGeneraliser static method)</a>
-</li>
-        <li><a href="autoapi/cdpg_anonkit/generalisation/index.html#cdpg_anonkit.generalisation.GeneraliseData.SpatialGeneraliser.generalise_spatial">generalise_spatial() (cdpg_anonkit.generalisation.GeneraliseData.SpatialGeneraliser static method)</a>
-</li>
-        <li><a href="autoapi/cdpg_anonkit/generalisation/index.html#cdpg_anonkit.generalisation.GeneraliseData.TemporalGeneraliser.generalise_temporal">generalise_temporal() (cdpg_anonkit.generalisation.GeneraliseData.TemporalGeneraliser static method)</a>
-</li>
-        <li><a href="autoapi/cdpg_anonkit/generalisation/index.html#cdpg_anonkit.generalisation.GeneraliseData">GeneraliseData (class in cdpg_anonkit.generalisation)</a>
-</li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/generalisation/index.html#cdpg_anonkit.generalisation.GeneraliseData.CategoricalGeneraliser">GeneraliseData.CategoricalGeneraliser (class in cdpg_anonkit.generalisation)</a>
-</li>
-        <li><a href="autoapi/cdpg_anonkit/generalisation/index.html#cdpg_anonkit.generalisation.GeneraliseData.SpatialGeneraliser">GeneraliseData.SpatialGeneraliser (class in cdpg_anonkit.generalisation)</a>
-</li>
-        <li><a href="autoapi/cdpg_anonkit/generalisation/index.html#cdpg_anonkit.generalisation.GeneraliseData.TemporalGeneraliser">GeneraliseData.TemporalGeneraliser (class in cdpg_anonkit.generalisation)</a>
-</li>
-        <li><a href="autoapi/cdpg_anonkit/aggregation/index.html#cdpg_anonkit.aggregation.IncrementalGroupbyAggregator.get_final_result">get_final_result() (cdpg_anonkit.aggregation.IncrementalGroupbyAggregator method)</a>
-</li>
-        <li><a href="autoapi/cdpg_anonkit/aggregation/index.html#cdpg_anonkit.aggregation.IncrementalGroupbyAggregator.group_columns">group_columns (cdpg_anonkit.aggregation.IncrementalGroupbyAggregator attribute)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="H" class="genindex-section">
-  <h2>H</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/sanitisation/index.html#cdpg_anonkit.sanitisation.SanitiseData.hash_values">hash_values() (cdpg_anonkit.sanitisation.SanitiseData method)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="I" class="genindex-section">
-  <h2>I</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/aggregation/index.html#cdpg_anonkit.aggregation.IncrementalGroupbyAggregator">IncrementalGroupbyAggregator (class in cdpg_anonkit.aggregation)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="M" class="genindex-section">
-  <h2>M</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li>
-    module
-
-        <ul>
-          <li><a href="autoapi/cdpg_anonkit/index.html#module-cdpg_anonkit">cdpg_anonkit</a>
-</li>
-          <li><a href="autoapi/cdpg_anonkit/aggregation/index.html#module-cdpg_anonkit.aggregation">cdpg_anonkit.aggregation</a>
-</li>
-          <li><a href="autoapi/cdpg_anonkit/generalisation/index.html#module-cdpg_anonkit.generalisation">cdpg_anonkit.generalisation</a>
-</li>
-          <li><a href="autoapi/cdpg_anonkit/sanitisation/index.html#module-cdpg_anonkit.sanitisation">cdpg_anonkit.sanitisation</a>
-</li>
-        </ul></li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="P" class="genindex-section">
-  <h2>P</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/aggregation/index.html#cdpg_anonkit.aggregation.IncrementalGroupbyAggregator.process_chunk">process_chunk() (cdpg_anonkit.aggregation.IncrementalGroupbyAggregator method)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="S" class="genindex-section">
-  <h2>S</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/sanitisation/index.html#cdpg_anonkit.sanitisation.SanitiseData.sanitise_data">sanitise_data() (cdpg_anonkit.sanitisation.SanitiseData method)</a>
-</li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="autoapi/cdpg_anonkit/sanitisation/index.html#cdpg_anonkit.sanitisation.SanitiseData">SanitiseData (class in cdpg_anonkit.sanitisation)</a>
-</li>
-        <li><a href="autoapi/cdpg_anonkit/sanitisation/index.html#cdpg_anonkit.sanitisation.SanitiseData.suppress">suppress() (cdpg_anonkit.sanitisation.SanitiseData method)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
 
         </article>
       </div>
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="autoapi/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">API Reference</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -468,8 +375,31 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Introduction</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li><a class="reference internal" href="#optional-dependencies">Optional Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

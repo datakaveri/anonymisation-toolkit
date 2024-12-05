@@ -1,0 +1,99 @@
+cdpg_anonkit.sanitisation
+=========================
+
+.. py:module:: cdpg_anonkit.sanitisation
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   cdpg_anonkit.sanitisation.SanitiseData
+
+
+Module Contents
+---------------
+
+.. py:class:: SanitiseData
+
+   .. py:method:: clip(min_value: float, max_value: float) -> pandas.Series
+
+      Clip (limit) the values in a Series to a specified range.
+
+      :param series: The input Series to be clipped.
+      :type series: pd.Series
+      :param min_value: The minimum value to clip to.
+      :type min_value: float
+      :param max_value: The maximum value to clip to.
+      :type max_value: float
+
+      :returns: The clipped Series.
+      :rtype: pd.Series
+
+
+
+   .. py:method:: hash_values(salt: str = '') -> pandas.Series
+
+      Hash the values in a Series using the SHA-256 algorithm.
+
+      This can be used to pseudonymise values that need to be kept secret.
+      The salt parameter can be used to add a common salt to all values.
+      This can be useful if you want to combine the hashed values with other columns
+      to create a unique identifier.
+
+      :param series: The input Series to be hashed.
+      :type series: pd.Series
+      :param salt: The salt to add to all values before hashing.
+                   Defaults to an empty string.
+      :type salt: str, optional
+
+      :returns: The hashed Series.
+      :rtype: pd.Series
+
+
+
+   .. py:method:: suppress(threshold: int = 5, replacement: Optional[Union[str, int, float]] = None) -> pandas.Series
+
+      Suppress all values in a Series that occur less than a given threshold.
+
+      Replace all values that occur less than the threshold with the replacement value.
+
+      :param series: The input Series to be suppressed.
+      :type series: pd.Series
+      :param threshold: The minimum number of occurrences for a value to be kept.
+                        Defaults to 5.
+      :type threshold: int, optional
+      :param replacement: The value to replace suppressed values with.
+                          Defaults to None, which means that the values will be replaced with NaN.
+      :type replacement: Optional[Union[str, int, float]], optional
+
+      :returns: The Series with suppressed values.
+      :rtype: pd.Series
+
+
+
+   .. py:method:: sanitise_data(columns_to_sanitise: List[str], sanitisation_rules: Dict[str, Dict[str, Union[str, float, int, List, Dict]]], drop_na: bool = False) -> pandas.DataFrame
+
+      Sanitise a DataFrame by applying different methods to each column.
+
+      :param df: The input DataFrame to be sanitised.
+      :type df: pd.DataFrame
+      :param columns_to_sanitise: The columns in the DataFrame to be sanitised.
+      :type columns_to_sanitise: List[str]
+      :param sanitisation_rules: A dictionary that maps each column in columns_to_sanitise to a dictionary
+                                 that specifies the sanitisation method and parameters for that column.
+                                 The dictionary should contain the following keys:
+                                 * 'method': str, the sanitisation method to use
+                                 * 'params': Dict[str, Union[str, float, int, List, Dict]], the parameters
+                                   for the sanitisation method
+      :type sanitisation_rules: Dict[str, Dict[str, Union[str, float, int, List, Dict]]]
+      :param drop_na: If True, drop all rows in the DataFrame that have any NaN values in the
+                      columns specified in columns_to_sanitise. Defaults to False.
+      :type drop_na: bool, optional
+
+      :returns: The sanitised DataFrame.
+      :rtype: pd.DataFrame
+
+
+
