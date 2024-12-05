@@ -1,3 +1,6 @@
+[![Deploy Documentation](https://github.com/datakaveri/anonymisation-toolkit/actions/workflows/docs.yml/badge.svg?event=push)](https://github.com/datakaveri/anonymisation-toolkit/actions/workflows/docs.yml)
+
+
 # A toolkit for data anonymisation.
 
 View the documentation for this project [here](https://novoneel-iudx.github.io/differential-privacy-toolkit/).
