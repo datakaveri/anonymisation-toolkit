@@ -147,7 +147,7 @@ def test_empty_chunk_handling():
     """
     Test handling of empty chunks
     """
-    aggregator = IncrementalGroupbyAggregator('category', 'value')
+    aggregator = IncrementalGroupbyAggregator('category', 'value', 'mean')
     
     # Empty chunk
     chunk = pd.DataFrame(columns=['category', 'value'])
