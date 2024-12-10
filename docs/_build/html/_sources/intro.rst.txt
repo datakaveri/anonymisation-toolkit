@@ -24,7 +24,7 @@ Using the toolkit, you can perform the following operations:
 
 
 Installation
------------
+------------
 CDPG Anonkit is available on PyPI. We recommend using the latest version of Python - CDPG Anonkit supports Python 3.10 and newer. 
 We also recommend using a `virtual environment`_ in order
 to isolate your project dependencies from other projects and the system.
@@ -43,17 +43,27 @@ Dependencies
 
 These will be installed automatically when installing the package.
 
--   `MarkupSafe`_ escapes untrusted input when rendering templates to
-    avoid injection attacks.
+-   `H3`_ A system to partition geographical areas into uniquely identifiable, hexagonal, hierarchical cells.
 
-.. _MarkupSafe: https://markupsafe.palletsprojects.com/
+-   `Pandas`_ A library for high-performance, easy-to-use data structures and data analysis tools.
 
+-   `Numpy`_ A package for scientific computing in python.
 
-Optional Dependencies
-~~~~~~~~~~~~~~~~~~~~~
+-   `typing_extensions`_ A complementary library to the standarding typing module. Enables run-time support for type hints.
 
-These distributions will not be installed automatically.
+.. _H3: https://docs.kepler.gl/docs/user-guides/c-types-of-layers/j-h3
 
--   `Babel`_ provides translation support in templates.
+.. _Pandas: https://pandas.pydata.org/docs/
 
-.. _Babel: https://babel.pocoo.org/
+.. _Numpy: https://numpy.org/doc/stable/
+
+.. _typing_extensions: https://typing-extensions.readthedocs.io/en/latest/
+
+Developer Dependencies
+~~~~~~~~~~~~~~~~~~~~~~
+
+These distributions will not be installed automatically and will only be installed on installing the dev version of cdpg-anonkit.
+
+-   `Pytest`_ provides translation support in templates.
+
+.. _Pytest: https://docs.pytest.org/en/stable/contents.html

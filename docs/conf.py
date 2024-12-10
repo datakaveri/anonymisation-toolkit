@@ -9,7 +9,7 @@
 project = 'Anonymisation Toolkit'
 copyright = '2024, Center for Data for Public Good'
 author = 'Novoneel Chakraborty'
-release = '0.1.2.1'
+release = '0.1.0'
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))

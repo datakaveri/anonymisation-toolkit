@@ -1,7 +1,7 @@
 """
 A toolkit for data anonymisation.
 """
-__version__ = "0.1.2.3"
+__version__ = "0.1.0"
 
 
 '''Functions to be exposed to user'''

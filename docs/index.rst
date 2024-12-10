@@ -3,10 +3,11 @@
 
 .. image:: _static/cdpg-logo_hires.png
     :align: center
+    :width: 700px
     :target: https://dataforpublicgood.org.in
-==========================
-CDPG Anonkit
-==========================
+========================================
+(Center of) Data for Public Good Anonkit
+========================================
 
 CDPG Anonkit is a toolkit that can be used to preprocess, anonymise, and post-process data. This toolkit was originally written as an application intended to be run inside a Trusted Execution Environment (TEE) and was later developed into a python package to allow anyone to be able to use it for any dataset.
 
