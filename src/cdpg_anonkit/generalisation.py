@@ -4,7 +4,6 @@ import numpy as np
 import h3
 
 
-
 class GeneraliseData:
     class SpatialGeneraliser:
         # TODO: rewrite so function can accept both dataframe with specified location column as well as series

@@ -5,9 +5,9 @@ __version__ = "0.1.0"
 
 
 '''Functions to be exposed to user'''
-from src.cdpg_anonkit.sanitisation import *
-from src.cdpg_anonkit.generalisation import *
-from src.cdpg_anonkit.aggregation import *
+from cdpg_anonkit.sanitisation import *
+from cdpg_anonkit.generalisation import *
+from cdpg_anonkit.aggregation import *
 
 __all__ = [
     'SanitiseData',
