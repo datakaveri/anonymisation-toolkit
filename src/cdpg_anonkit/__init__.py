@@ -1,13 +1,14 @@
 """
 A toolkit for data anonymisation.
 """
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 
 '''Functions and classes to be exposed to user'''
 from cdpg_anonkit.sanitisation import *
 from cdpg_anonkit.generalisation import *
 from cdpg_anonkit.aggregation import *
+from cdpg_anonkit.noise import *
 
 __all__ = [
     'SanitiseData',
@@ -19,5 +20,8 @@ __all__ = [
     'format_coordinates',
     'generalise_spatial',
     'generalise_temporal',
-    'generalise_categorical'
-]
+    'generalise_categorical',
+    'add_noise',
+    'compute_sensitivity',
+    'clip_count',
+    'DifferentialPrivacy',]
