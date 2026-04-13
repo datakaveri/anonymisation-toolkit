@@ -1,6 +1,6 @@
 h3==4.1.2
 numpy==2.1.2
 pandas==2.2.3
-pytest==8.3.3
+pytest==9.0.3
 python-dateutil==2.9.0.post0
 typing_extensions==4.12.2
